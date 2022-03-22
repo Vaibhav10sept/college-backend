@@ -17,10 +17,17 @@ app.use(cors({origin: true,credentials:true}),bodyParser.urlencoded({extended: t
 app.enable("trust proxy");
 
 // connect to mongodb
-mongoose.connect(keys.mongodb.dbURI,{ useUnifiedTopology: 
-  true, useNewUrlParser: true } , () => {
-  console.log('connected to mongodb');
-});
+// mongoose.connect(keys.mongodb.dbURI,{ useUnifiedTopology: 
+//   true, useNewUrlParser: true } , () => {
+//   console.log('connected to mongodb');
+// });
+
+mongoose.connect(keys.mongodb.dbURI)
+  .then(function (db) { // <- db as first argument
+    console.log('connected to mongodb')
+  })
+  .catch(function (err) {})
+
 const connection = mongoose.connection;
 
 connection.once("open", function() {
