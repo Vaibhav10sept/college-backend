@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 8000
 
 
 const app = express();
-app.use(bodyParser.json({ extended: false }));
+// app.use(bodyParser.json({ extended: false }));
+app.use(express.json())
 app.use(cors({origin: true,credentials:true}),bodyParser.urlencoded({extended: true}))
 app.enable("trust proxy");
 
