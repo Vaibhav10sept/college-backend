@@ -44,7 +44,7 @@ app.use('/api/student',studentRoutes);
 app.get('/', (req, res) => {
   // const name = req.query.name || 'World';
   // res.setHeader('Content-Type', 'application/json');
-  res.send("<H2>Hello,ehlllo welcome to college finder backend.</h2>");
+  res.send("<H2>Hello, welcome to college finder backend.</h2>");
 });
 
 app.get('/api/greeting', (req, res) => {
