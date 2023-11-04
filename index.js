@@ -22,6 +22,7 @@ app.enable("trust proxy");
 //   true, useNewUrlParser: true } , () => {
 //   console.log('connected to mongodb');
 // });
+//added this line to create difference in git push
 
 mongoose.connect(keys.mongodb.dbURI)
     .then(function(db) { // <- db as first argument
